@@ -17,7 +17,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -52,7 +52,7 @@ afterEvaluate {
                 from (components["release"])
                 groupId = "com.github.jihaddmz"
                 artifactId = "simplified-recycler"
-                version = "1.0.0"
+                version = "1.0.1"
             }
         }
     }
