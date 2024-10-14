@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.jihaddmz.simplifiedrecyclerexample.app-mergeDebugResources-30:/layout/item_recyclerview.xml",
+        "source": "com.jihaddmz.simplifiedrecyclerexample.app-main-33:/layout/item_recyclerview.xml"
+    },
+    {
+        "merged": "com.jihaddmz.simplifiedrecyclerexample.app-mergeDebugResources-30:/layout/activity_main.xml",
+        "source": "com.jihaddmz.simplifiedrecyclerexample.app-main-33:/layout/activity_main.xml"
+    }
+]

@@ -1,0 +1,2 @@
+com.jihaddmz.simplified_recycler.R
+com.jihaddmz.simplified_recycler.R: R()

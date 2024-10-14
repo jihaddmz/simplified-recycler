@@ -1,0 +1,4 @@
+#Mon Oct 14 18:41:50 EEST 2024
+base.0=/Users/jihadmahfouz/Development/Projects/SimplifiedRecyclerExample/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

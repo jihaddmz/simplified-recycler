@@ -1,0 +1,11 @@
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter$ViewHolder$enableSwipe$1
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter$ViewHolder$enableSwipe$2
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter$ViewHolder$enableSwipe$3
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter$ViewHolder$enableSwipe$gestureDetector$1
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter$ViewHolder$hideActionButtons$$inlined$doOnEnd$1
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter$ViewHolder$showActionButtons$$inlined$doOnEnd$1
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter$ViewHolder$updateItem$1
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter$ViewHolder
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapter
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapterKt$simplifiedRecycler$1
+com.jihaddmz.simplified_recycler.BaseRecyclerAdapterKt

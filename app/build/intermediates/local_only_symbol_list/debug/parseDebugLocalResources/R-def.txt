@@ -1,0 +1,28 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple
+color red
+color white
+drawable baseline_delete_24
+drawable baseline_edit_24
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable vector_profile
+id actionButtons
+id iv
+id ivDelete
+id ivEdit
+id llForeground
+id main
+id rv
+id tv
+layout activity_main
+layout item_recyclerview
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.SimplifiedRecyclerExample
+style Theme.SimplifiedRecyclerExample
+xml backup_rules
+xml data_extraction_rules

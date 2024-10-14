@@ -1,0 +1,1 @@
+com.jihaddmz.simplified_recycler
