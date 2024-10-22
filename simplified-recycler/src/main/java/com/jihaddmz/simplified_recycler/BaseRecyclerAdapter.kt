@@ -84,9 +84,9 @@ class BaseRecyclerAdapter<VB : ViewBinding, T>(
          * this method is called whenever you have updated
          * the current item
          **/
-        fun updateItem(position: Int, llForeground: ViewGroup, onSwipeReset: () -> Unit = {}) {
+        fun updateItem(position: Int, llForeground: ViewGroup? = null, onSwipeReset: () -> Unit = {}) {
             notifyItemChanged(position)
-            if (isButtonsVisible) hideActionButtons(llForeground, onSwipeReset)
+            if (isButtonsVisible && llForeground != null) hideActionButtons(llForeground, onSwipeReset)
         }
 
         /**
