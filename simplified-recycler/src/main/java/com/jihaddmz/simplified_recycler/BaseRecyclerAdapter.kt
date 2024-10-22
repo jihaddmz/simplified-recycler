@@ -39,6 +39,15 @@ class BaseRecyclerAdapter<VB : ViewBinding, T>(
 
     }
 
+    /**
+     * Method for updating the list passed to the adapter, and notifying the adapter
+     * the current position/layoutPosition
+     **/
+    fun updateList(newList: MutableList<T>) {
+        list = newList
+        notifyDataSetChanged()
+    }
+
     inner class ViewHolder(val itemBinding: VB) : RecyclerView.ViewHolder(itemBinding.root) {
 
         private var isButtonsVisible = false
@@ -87,11 +96,6 @@ class BaseRecyclerAdapter<VB : ViewBinding, T>(
         fun updateItem(position: Int, llForeground: ViewGroup? = null, onSwipeReset: () -> Unit = {}) {
             notifyItemChanged(position)
             if (isButtonsVisible && llForeground != null) hideActionButtons(llForeground, onSwipeReset)
-        }
-
-        fun setList(newList: MutableList<T>) {
-            list = newList
-            notifyDataSetChanged()
         }
 
         /**
