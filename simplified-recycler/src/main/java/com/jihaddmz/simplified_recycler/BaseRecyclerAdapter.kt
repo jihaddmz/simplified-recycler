@@ -16,7 +16,7 @@ import androidx.viewbinding.ViewBinding
 
 class BaseRecyclerAdapter<VB : ViewBinding, T>(
     private val viewBindingProvider: (inflater: LayoutInflater, container: ViewGroup?, attachToRoot: Boolean) -> VB,
-    private val list: MutableList<T>,
+    private var list: MutableList<T>,
     private val context: Context,
     private val onBindItem: BaseRecyclerAdapter<VB, T>.ViewHolder.(T, Int) -> Unit,
 ) : RecyclerView.Adapter<BaseRecyclerAdapter<VB, T>.ViewHolder>() {
@@ -87,6 +87,11 @@ class BaseRecyclerAdapter<VB : ViewBinding, T>(
         fun updateItem(position: Int, llForeground: ViewGroup? = null, onSwipeReset: () -> Unit = {}) {
             notifyItemChanged(position)
             if (isButtonsVisible && llForeground != null) hideActionButtons(llForeground, onSwipeReset)
+        }
+
+        fun setList(newList: MutableList<T>) {
+            list = newList
+            notifyDataSetChanged()
         }
 
         /**
