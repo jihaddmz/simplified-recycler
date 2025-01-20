@@ -27,40 +27,41 @@ dependencies {
 #### *Make sure viewBinding is activated*
 
 ```kotlin
-    private fun setUpRecycler() {
-        val listOfStrings = mutableListOf(Test("A"), Test("B"), Test("C"))
+private fun setUpRecycler() {
+    val listOfStrings = mutableListOf(Test("A"), Test("B"), Test("C"))
 
-        viewBinding.rv.adapter = simplifiedRecycler(
-            ItemRecyclerviewBinding::inflate,
-            listOfStrings,
-            this,
-        ) { item, position ->
+    viewBinding.rv.adapter = simplifiedRecycler(
+        ItemRecyclerviewBinding::inflate,
+        listOfStrings,
+        this,
+    ) { item, position ->
 
-            itemBinding.tv.text = item.text
+        itemBinding.tv.text = item.text
 
-            itemBinding.ivDelete.setOnClickListener {
-                clearItem(layoutPosition) // if you want to delete the current item, just call this method and pass
-                // the current position/layoutPosition
-            }
-
-            itemBinding.ivEdit.setOnClickListener {
-                item.text = "Jihad"
-                updateItem(position, itemBinding.llForeground) // this method is called whenever you have updated
-                // the current item
-            }
-
-            itemBinding.iv.setOnClickListener {
-                addItem(2, Test("Jihad")) // method responsible for adding an item at specified position
-            }
-
-            enableSwipe(itemBinding.llForeground, onSwiped = {
-                Toast.makeText(this@MainActivity, "Swiped", Toast.LENGTH_SHORT).show()
-            }, onSwipeReset = {
-                Toast.makeText(this@MainActivity, "Swiped reset", Toast.LENGTH_SHORT).show()
-            }) // for enabling swipe to action on recycler item
-
+        itemBinding.ivDelete.setOnClickListener {
+            clearItem(layoutPosition) // if you want to delete the current item, just call this method and pass
+            // the current position/layoutPosition
         }
+
+        itemBinding.ivEdit.setOnClickListener {
+            item.text = "Jihad"
+            updateItem(layoutPosition, itemBinding.llForeground) // call this method to update the current item
+        }
+
+        itemBinding.iv.setOnClickListener {
+            addItem(layoutPosition + 1, Test("Jihad")) // method responsible for adding an item at specified position
+        }
+
+        // to enable swipe on the current item
+        enableSwipe(itemBinding.llForeground, onSwiped = {
+            Toast.makeText(this@MainActivity, "Swiped", Toast.LENGTH_SHORT).show()
+        }, onSwipeReset = {
+            Toast.makeText(this@MainActivity, "Swiped reset", Toast.LENGTH_SHORT).show()
+        }) // for enabling swipe to action on recycler item
+
     }
+}
+
 ```
 
 ## Contributing
