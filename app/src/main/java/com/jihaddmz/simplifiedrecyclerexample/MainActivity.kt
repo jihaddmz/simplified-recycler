@@ -49,14 +49,14 @@ class MainActivity : AppCompatActivity() {
 
             itemBinding.ivEdit.setOnClickListener {
                 item.text = "Jihad"
-                updateItem(position, itemBinding.llForeground) // this method is called whenever you have updated
-                // the current item
+                updateItem(layoutPosition, itemBinding.llForeground) // call this method to update the current item
             }
 
             itemBinding.iv.setOnClickListener {
-                addItem(2, Test("Jihad")) // method responsible for adding an item at specified position
+                addItem(layoutPosition + 1, Test("Jihad")) // method responsible for adding an item at specified position
             }
 
+            // to enable swipe on the current item
             enableSwipe(itemBinding.llForeground, onSwiped = {
                 Toast.makeText(this@MainActivity, "Swiped", Toast.LENGTH_SHORT).show()
             }, onSwipeReset = {
